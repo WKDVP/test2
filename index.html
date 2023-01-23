@@ -4,11 +4,13 @@
     <head>
         <title>Magic Soragodong</title>
         <script>
-           /* function doAsk();{
-                var arr[1,2,3];
-               document.write("이케 한다고 시발");
-            }
-            onclick="doAsk();"
+           function doAsk(){
+            var str = document.getElementById("text");
+            var arr=["안돼","하지마","가만히있어","좋아","해","괜찮을꺼야"];
+            var ansNum = Math.floor( Math.random() * 6);
+            str.innerHTML=arr[ansNum]+'<br>';
+           }
+            
     
         </script>
     </head>
@@ -18,8 +20,8 @@
             <img src="MBSRGD.jpg" alt="">
             <br>
             <input type="text" placeholder="질문을 입력하세요">
-            <input type="button" value="질문하기" />  
-            <p id="Ans"></p>
+            <input type="button" value="질문하기" onclick="doAsk();"/> 
+            <p id="text"></p>
         </div>
         
     </body>
